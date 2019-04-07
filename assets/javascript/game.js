@@ -19,7 +19,7 @@ var data = [];
 var table;
 
 $(document).ready(function () {
-    var date_input = $('input[name="date"]'); //our date input has the name "date"
+    var date_input = $('#start-date-input'); //our date input has the name "date"
     var container = $('.bootstrap-iso form').length > 0 ? $('.bootstrap-iso form').parent() : "body";
     var options = {
         format: 'mm/dd/yyyy',
@@ -85,11 +85,11 @@ $(document).ready(function () {
         var startDate = childSnapshot.val().startDate;
         var monthlyRate = childSnapshot.val().monthlyRate;
         var monthlyRateMoney = accounting.formatMoney(childSnapshot.val().monthlyRate);
-        var startDate = moment.unix(startDate).format("MM/DD/YYYY");
+        var startDateFormatted = moment.unix(startDate).format("MM/DD/YYYY");
         var monthsWorked = moment().diff(moment(startDate, "X"), "months");
         var totalBilled = accounting.formatMoney(monthsWorked * monthlyRate);
         console.log(totalBilled)
-        var newEmployee = [name,  role, startDate, monthsWorked, monthlyRateMoney, totalBilled];
+        var newEmployee = [name,  role, startDateFormatted, monthsWorked, monthlyRateMoney, totalBilled];
         console.log(newEmployee);
         
 

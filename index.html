@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <link href="./assets/css/reset.css" rel="stylesheet" type="text/css"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link href="./assets/css/styles.css" rel="stylesheet" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+    <script src="./assets/javascript/accounting.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css" />
+    
+
+    <title>Employee</title>
+</head>
+
+<body>
+
+    <div id="heading"></div>
+
+    <div id="main-container">
+
+        <div class="jumbotron">
+            <h1 class="text-center">Employee Data Management</h1>
+            <h3 class="text-center">A Comprehensive Directory of Employee Billable Hours</h3>
+        </div>
+
+        <div class="card mb-4">
+            <div class="card-header">Current Employees</div>
+            <div class="card-body">
+
+
+
+                <table class="table table-dark table-striped table-hover" id="employee-table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Name</th>
+                            <th scope="col">Role</th>
+                            <th scope="col">Start Date</th>
+                            <th scope="col">Months Worked</th>
+                            <th scope="col">Monthly Rate($)</th>
+                            <th scope="col">Total Billed($)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="card mb-4">
+            <div class="card-header">Add Employee</div>
+            <div class="card-body">
+
+
+                <form role="form">
+                    <div class="form-group row">
+                        <div class="col">
+                            <label for="first-name-input">First Name:</label>
+                            <input type="text" id="first-name-input" class="form-control" placeholder="John"
+                                required="true">
+                        </div>
+                        <div class="col">
+                            <label for="last-name-input">Last Name:</label>
+                            <input type="text" id="last-name-input" class="form-control" placeholder="Doe" required>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="role-input">Role:</label>
+                        <input class="form-control" id="role-input" placeholder="Software Developer" type="text"
+                            required>
+                    </div>
+                    <div class="form-group row">
+                        <label for="start-date-input">Start Date:</label>
+                        <input class="form-control" id="start-date-input" placeholder="01/13/1989" type="text" name="date" required>
+                    </div>
+                    <div class="form-group row">
+                        <label for="monthly-rate-input">Monthly Rate:</label>
+                        <input class="form-control" id="monthly-rate-input" placeholder="5000" type="text" required>
+                    </div>
+
+                    <button class="btn btn-primary float-right" id="add-user">Submit</button>
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+
+    </div>
+
+
+
+
+
+
+
+    <script src="./assets/javascript/game.js"></script>
+
+</body>
+
+</html>

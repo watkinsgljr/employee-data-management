@@ -71,11 +71,11 @@ $(document).ready(function () {
         database.ref().push(newEmployee);
 
 
-        $("#first-name-input").val("");
-        $("#last-name-input").val("");
-        $("#role-input").val("");
-        $("#start-date-input").val("");
-        $("#monthly-rate-input").val("");
+        $("#first-name-input").val(null);
+        $("#last-name-input").val(null);
+        $("#role-input").val(null);
+        $("#start-date-input").val(null);
+        $("#monthly-rate-input").val(null);
     });
 
     database.ref().on("child_added", function (childSnapshot) {
